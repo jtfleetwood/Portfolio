@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  font-family: 'Candara';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.page-container {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
+  background-size: cover;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  padding-bottom:7.5vw;
+  overflow-y:scroll;
+}
+
+.page-container .heading {
+  font-size:5vw;
+  color:gold;
+  display:block;
+  text-align:center;
+  width:100%;
+  margin-top:2.5%;
+  font-weight:bold;
+}
+
+.self-image {
+  width:15vw;
+  height:15vw;
+  border:none;
+  border-radius: 50%;
+  display:block;
+  margin:auto;
+  margin-top:5%;
+}
+
+p {
+  margin-top:5%;
+  margin-left:2.5%;
+  text-align:center;
+  color:white;
+  font-size:2.5vw;
+}
+
+p a {
+  text-decoration: none;
+  color:white;
+  font-weight:bold;
+  transition: all .2s ease-in-out;
+}
+
+p a:hover {
+  cursor:pointer;
+  color:gold;
+  font-size:3vw;
+}
+
+hr {
+  margin-top:10%;
+}
+
+.personal-links {
+  text-align:center;
+  margin-left:5%;
+  margin-top:5%;
+
+}
+
+.title {
+  margin-top:3%;
+}
+
+.personal-links img {
+  height:3vw;
+  width:3vw;
+  margin-right:5%;
+  display:inline-block;
+  vertical-align:top;
+  transition:all .2s ease-in-out;
+}
+
+.personal-links img:hover {
+  cursor:pointer;
+  transform: scale(1.2);
+}
+
+.job-container {
+  width:80vw;
+  height:auto;
+  border:solid;
+  margin:auto;
+  border-width:thin;
+  color:white;
+  border-radius: 1vw;
+  padding:1.5vw;
+  margin-top:2%;
+}
+
+.job-container span {
+  font-weight:bold;
+  font-size:1.5vw;
+  color:white;
+  text-align:left;
+}
+
+
+.job-container p {
+  font-weight:bold;
+  font-size:1.5vw;
+  margin-top:2.5%;
+  text-align:left;
+  margin-left:0;
+}
+
+.content-listings {
+  text-decoration: none;
+  list-style-type: disc;
+  font-size:1.25vw;
+  margin-bottom:2%;
+}
+
+.job-duration {
+  margin:0 !important;
+  display:inline-block !important;
+  position:absolute !important;
+  font-weight: normal !important;
+  left:70% !important;
+  position:relative;
+}
+
+.job-city {
+  font-size:1.5vw;
+  font-weight:normal !important;
+}
+
+.bt {
+  border-radius:2vw;
+  margin-left:5%;
+  border-color:white;
+  color:white;
+  font-weight:bold;
+  background:none;
+  width:50%;
+  height:2vw;
+  text-align:center;
+  padding-bottom:2.5%;
+  font-size:1.5vw;
+  overflow:hidden;
+
+}
+ .hr {
+  margin-top:10%;
+  margin-bottom:5%;
+  border:solid;
+  border-width: thin;
+  color:yellow;
+  opacity:1;
+ }
+
+ .trigger-button {
+  display:block;
+  margin:auto;
+  width:35vw;
+  border:none;
+  background:gold;
+  color:black;
+  margin-top:2.5%;
+  padding:.5vw;
+}
+
+.dropdown-content {
+  background: #fff;
+  color: #000000;
+  list-style: none;
+  display:block;
+  margin:auto;
+  width:35vw;
+  font-size: 1.5vw;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease !important;
+  padding: 0;
+  text-align:center;
+}
+
+.dropdown-content.active {
+  height: 10vw;
+  position:relative;
+  margin:auto;
+  top:0vw;
+  width:35vw;
+  text-align:center;
+  overflow: auto;
+  color:black;
+  margin-bottom:.5vw;
+}
+
+.dropdown-content.active li:hover {
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.dropdown-image {
+  float:right;
+  height:1.5vw;
+  width:1.5vw;
+}
+
+.dropdown-image.active {
+  transform:scaleY(-1);
+}
+
+.project-description {
+  font-size:1.25vw;
+  font-weight:normal !important;
+  color:white;
+}
+
+.job-container .project-link {
+  font-weight:normal !important;
+}
+
+.job-container .project-link a {
+  font-weight:bold;
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+  color:white;
+}
+
+.job-container .project-link a:hover {
+  font-weight:bold;
+  font-size:2vw;
+  color:gold !important;
+  cursor:pointer;
+}
+
+.footer-container {
+  position:absolute;
+  height:7.5vw;
+  width:100%;
+  margin-top:10vw;
+  background:black;
+  padding:1.5vw;
+  font-weight:bold;
+}
+
+.footer-container span {
+  text-align:center;
+  display:block;
+  color:white;
+}
+
+.contact-container {
+  text-align:center;
+}
+
+.contact-container a img {
+  margin-top:1vw;
+  height:2vw;
+  width:3vw;
+  display:inline-block;
+  transition:all .2s ease-in-out;
+  margin-right:.75vw;
+  
+}
+
+.contact-container a img:hover {
+  transform:scale(1.2);
+}
+
