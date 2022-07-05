@@ -214,15 +214,16 @@ const EducationListing = (props : EducationProps) => {
           <em>{props.edu.degree}</em>
           <span className = "job-duration">{props.edu.start_date} - {props.edu.end_date}</span>
           <p className = "job-city"><em><b>{props.edu.school}</b></em> - <b>GPA: {props.edu.gpa}</b></p>
-          <p style = {{fontWeight:"normal"}}>Notable Courses: </p>
-          <ul>
-            {props.edu.notable_courses.map((course : string, index : number) => {
-              if (index === props.edu.notable_courses.length - 1) {
-                return <span style = {{fontWeight:"normal", fontSize:"1.25vw"}}>{course} </span>
-              } 
-              return <span style = {{fontWeight:"normal", fontSize:"1.25vw"}}>{course}, </span>
-            })}
-          </ul>
+          <p className = "courses-heading">Notable Courses: </p>
+            <div className = "course-container">
+              {props.edu.notable_courses.map((course : string, index : number) => {
+                if (index === props.edu.notable_courses.length - 1) {
+                  return <span className = "courses">{course} </span>
+                } 
+                return <span className = "courses">{course}, </span>
+              })}
+            </div>
+          
         </span>
 
       </div>
@@ -239,7 +240,7 @@ const JobListing = (props : JobProps) => {
           {props.job.start_date} - {props.job.end_date}</span>
         </span>
         <p className = "job-city"><em><b>{props.job.employer}</b></em> - {props.job.city}</p>
-        <p style = {{fontWeight:"normal"}}>Responsibilities</p>
+        <p className = "courses-heading">Responsibilities</p>
         <ul>
           {props.job.responsibilities.map((res : string) => <li className = "content-listings">{res}</li>)}
         </ul>
@@ -265,7 +266,7 @@ const Dropdown = (props : DropdownProps) => {
   return (
       <>
       <button onClick={() => props.setShowDropdown(!props.showDropdown)} className="trigger-button">
-        <b>{props.title}</b>
+        <span>{props.title}</span>
         <img className = {props.showDropdown ? "dropdown-image active" : "dropdown-image"} src = "drop-down-list-svgrepo-com.svg"></img>
       </button>
       
@@ -288,11 +289,11 @@ const ProjectListing = (props : ProjectProps) => {
         <em>{props.project.title}</em>
       </span>
         <span className = "job-duration">{props.project.date}</span>
-        <p style={{fontWeight:"normal"}}><b>Tech Stack: </b> 
+        <p className = "job-city"><b>Tech Stack: </b> 
           {props.project.tech_stack}
         </p>
-        <p style = {{fontWeight:"normal", marginBottom:"0"}}>Description</p>
-        <p style = {{marginBottom:"2.5%",marginTop:"1em", fontWeight:"normal", fontSize:"1.25vw", marginLeft:"2.5%"}}>{props.project.description}</p>
+        <p className = "courses-heading">Description</p>
+        <p className = "project-description">{props.project.description}</p>
         <span className = "project-link">Click <a href = {props.project.link} target = "_blank">here</a> to check it out!</span>
     </div>
   )
@@ -301,7 +302,7 @@ const ProjectListing = (props : ProjectProps) => {
 const Footer = () => {
   return (
     <div className = "footer-container">
-      <span >Interested in connecting?</span>
+      <span>Interested in connecting?</span>
       <div className = "contact-container">
         <a href ="tel:864-404-1838"><img src = "phone-call-svgrepo-com.svg"></img></a>
         <a href ="mailto: jtfleetwood14@gmail.com"><img src = "email-svgrepo-com.svg"></img></a>
